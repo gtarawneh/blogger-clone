@@ -1,0 +1,158 @@
+<%@ Master Language="C#" %>
+
+<%@ Import Namespace="System.Data.OleDb" %>
+
+<script runat="server">
+    
+    public string spam_link_str="";
+
+    protected void Page_Init(object sender, EventArgs e)
+    {
+
+        if ((string)Session["Logged"] == "True")
+        {
+            // Creating and initializing data acess objects
+
+            OleDbConnection Con = (OleDbConnection)Application["Con"];
+
+            OleDbCommand Com = new OleDbCommand();
+
+            Com.Connection = Con;
+
+            Com.CommandText = "select count(*) as C from comments where ComVisible=0";
+            
+            int spamCount = (int)Com.ExecuteScalar();
+
+            if (spamCount > 0)
+            {
+                spam_link_str = " (" + spamCount.ToString() + ")";
+            }
+
+            Div1.Visible = true;
+
+        }
+        else
+        {
+            Div1.Visible = false;
+
+            Session["LoginRedirect"] = Request.Url.ToString ();
+
+            Response.Redirect("login.aspx");
+        }
+
+    }
+
+    protected void Link1_Click(object sender, EventArgs e)
+    {
+        Session["User"] = "";
+
+        Session["Logged"] = "";
+
+        Session["LoginRedirect"] = null;
+
+        Response.Redirect("login.aspx");
+    }
+
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        Label2.Text = (string)Session["User"];
+        Label3.Text = (string)Session["Section"];
+    }
+</script>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <link type="text/css" rel="Stylesheet" href="MyStyles.css" />
+    <title></title>
+
+    <script type="Text/javascript">
+    function Page_Load()
+    {
+        // in case it didn't exist in the loaded page :)
+    }
+    </script>
+
+</head>
+<body class="nicebody" onload="Page_Load();">
+<center>
+<div  style ="width :1400px; text-align :center ">
+<form id="pageform" method ="post" action ="">
+<input type="hidden" id="field1" name="field1" />
+<input type="hidden" id="field2" name="field2" />
+<input type="hidden" id="field3" name="field3" />
+</form>
+    <form id="form1" runat="server">
+        <div id="Div1" runat="server" visible="false">
+            <center>
+                <div id="UpperBar" style="padding-bottom: 6; width: 97%; border-bottom-style: solid;
+                    border-width: 1; border-color: rgb(200,200,200)">
+                    <span style="float: left; color: #223543;"><b><% Response.Write((string)Application["Setting2"]); %> 
+                        <asp:Label ID="Label1" runat="server" Text="" Visible="false"></asp:Label>
+                    </b></span><span style="float: right;">Welcome <b>
+                        <asp:Label ID="Label2" runat="server" Text=""></asp:Label></b> ! (<asp:LinkButton
+                            ID="Link1" runat="server" Text="Sign Out" OnClick="Link1_Click" />)</span>
+                    <br />
+                </div>
+                <br />
+                <table id="Arranger">
+                    <tr>
+                        <td class="ArrangerTD">
+                            <span class="title">
+                                <asp:Label ID="Label3" runat="server" Text=""></asp:Label></span>
+                            <br />
+                            <br />
+                            <div class="InsideContainer">
+                                <asp:ContentPlaceHolder runat="server" ID="ContentPlaceHolder1">
+                                </asp:ContentPlaceHolder>
+                            </div>
+                        </td>
+                        <td id="Arranger-Right">
+                            <table id="Dashboard">
+                                <tr>
+                                    <td id="Header">
+                                        Content Management
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="Content">
+                                        <a href="editpost.aspx?id=create"><span class="NewPost">Create New Post </span></a>
+                                        <hr />
+                                        <a href="posts.aspx"><span class="MyPosts">Manage Blog Posts</span></a>
+                                        <hr />
+                                        <a href="comments.aspx"><span class="Moderate">Moderate Comments</span></a>
+                                            <hr />
+                                        <a href="comments.aspx?view=spam"><span class="Moderate">Moderate Spam<% Response.Write(spam_link_str);  %></span></a>
+                                      
+                                    </td>
+                                </tr>
+                                </table>
+                                <br /><br />
+                                
+                                <table id="Dashboard" >
+                                <tr>
+                                    <td id="Header">
+                                        Administration
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="Content">
+                                        <a href="nowhere.aspx"><span class="Profile">Edit My Profile</span></a>
+                                        <hr />
+                                        <a href="blogsettings.aspx"><span class="BlogSettings">Blog Settings</span></a>
+                                        <hr />
+                                        <a href="visitors.aspx"><span class="Administrators">Visitors</span></a>
+                                      
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </center>
+        </div>
+    </form>
+</div>
+</center>
+</body>
+</html>

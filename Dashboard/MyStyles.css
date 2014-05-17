@@ -1,0 +1,540 @@
+﻿/* Shared Attributes */
+
+Body, .InsideContainer
+{
+    font-family: verdana;
+    font-size: 11;
+}
+
+#Arranger, .ArrangerTD
+{
+    vertical-align: top;
+    border-collapse: collapse;
+}
+
+#Arranger
+{
+    width: 97%;
+    vertical-align: top;
+}
+
+#Arranger-Right
+{
+    width: 23%;
+    vertical-align: top;
+    padding-top: 50;
+}
+
+a
+{
+    color: #2266de;
+}
+
+.no-display
+{
+    display: none;
+}
+
+.EditorBody
+{
+    color: Green;
+}
+
+.Schema, .Schema td, .Schema tr
+{
+    border-collapse: collapse;
+    border: dashed black;
+    border-width: 1px;
+}
+
+.BigButton
+{
+    font-family :Verdana ;
+    padding: 6px;
+    font-size: 11px;
+    margin-top: 5px;
+    width: 100px;
+}
+
+.MediumButton
+{
+    font-family :Verdana ;
+    padding: 3px;
+    font-size: 11px;
+    margin-top: 5px;
+    width: 80px;
+}
+
+/* login.aspx */
+
+#LoginBox
+{
+    border-collapse: collapse;
+    font-size: 11;
+    line-height: 3;
+    border: solid #c8c8c8;
+    border-width: 2;
+    width: 350;
+    position: relative;
+    top: 200;
+}
+
+#LoginBox TD
+{
+    text-align: center;
+    width: 100;
+    height: 20;
+    padding: 5;
+    vertical-align: middle;
+    border-bottom: none;
+    border-top: none;
+}
+
+
+/* posts.aspx */
+
+.title
+{
+    font-family: Arial;
+    font-weight: bold;
+    color: #4282b2;
+    font-size: 24;
+}
+
+.nicebody
+{
+    background-color: #eff2f5;
+    background-image: url(http://localhost/blog/Dashboard/Graphics/back.gif);
+    background-repeat: repeat-x;
+}
+
+#PostsTable
+{
+    width: 900;
+    font-size: 11;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+#PostsTable .TitleCell
+{
+    padding-left: 10px;
+}
+
+#PostsTable TR
+{
+    height: 40;
+    border: solid #c8c8c8;
+    border-width: 1;
+    color: #223543;
+}
+
+#PostsTable .PostTitle
+{
+    background-image: url(http://localhost/blog/ThemeGraphics/postico.gif);
+    background-repeat: no-repeat;
+    padding-left: 15px;
+    padding-bottom: 8px;
+    vertical-align: middle;
+}
+
+#PostsTable .Comment
+{
+    background-image: url(http://localhost/blog/Dashboard/Graphics/comment.gif);
+    background-repeat: no-repeat;
+    background-position: left middle;
+    padding-left: 19px;
+    padding-bottom: 2px;
+    vertical-align: middle;
+}
+
+.EditLink
+{
+    background-image: url(http://localhost/blog/ThemeGraphics/edit.gif);
+    background-repeat: no-repeat;
+    padding-left: 19px;
+    padding-bottom: 0px;
+    vertical-align: middle;
+}
+
+.TableViewLink
+{
+    background-image: url(../dashboard/graphics/table.gif);
+    background-repeat: no-repeat;
+    padding-left: 19px;
+    padding-bottom: 0px;
+    vertical-align: middle;
+}
+
+#PostsTable .ViewLink
+{
+    background-image: url(../ThemeGraphics/view.gif);
+    background-repeat: no-repeat;
+    padding-left: 19px;
+    padding-bottom: 0px;
+    vertical-align: middle;
+}
+
+.DeleteLink
+{
+    background-image: url(../ThemeGraphics/delete.gif);
+    background-repeat: no-repeat;
+    padding-left: 16px;
+    padding-bottom: 0px;
+    vertical-align: middle;
+}
+
+#PostsTable .DetailsLink
+{
+    background-image: url(../Dashboard/Graphics/details.gif);
+    background-repeat: no-repeat;
+    padding-left: 22px;
+    padding-bottom: 2px;
+    vertical-align: middle;
+}
+
+.NextPage
+{
+    background-image: url(../ThemeGraphics/next.gif);
+    background-position: right top;
+    background-repeat: no-repeat;
+    padding-right: 20px;
+    padding-bottom: 3px;
+    vertical-align: middle;
+}
+
+.PreviousPage
+{
+    background-image: url(../ThemeGraphics/previous.gif);
+    background-position: left top;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    padding-bottom: 3px;
+    vertical-align: middle;
+}
+
+.NewPost
+{
+    background-image: url(../ThemeGraphics/newpost.gif);
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    vertical-align: middle;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.BlogSettings
+{
+    background-image: url(../ThemeGraphics/settings.gif);
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    vertical-align: middle;
+    padding-top: 1px;
+    padding-bottom: 0px;
+}
+
+.Profile
+{
+    background-image: url(../Dashboard/Graphics/profile.gif);
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 20px;
+    vertical-align: middle;
+    padding-top: 1px;
+    padding-bottom: 2px;
+}
+
+.MyPosts
+{
+    background-image: url(../Dashboard/Graphics/book.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+    padding-left: 20px;
+    vertical-align: middle;
+    padding-top: 1px;
+    padding-bottom: 4px;
+}
+
+
+.Administrators
+{
+    background-image: url(../Dashboard/Graphics/administrators.gif);
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    vertical-align: middle;
+    padding-top: 1px;
+    padding-bottom: 2px;
+}
+
+.Moderate
+{
+    background-image: url(../Dashboard/Graphics/comments.png);
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    vertical-align: middle;
+    padding-top: 1px;
+    padding-bottom: 2px;
+}
+
+#PostsTable TD
+{
+    /* text-align: center; */
+    text-align: left;
+}
+
+#PostsTable #HeaderRow
+{
+    background-color: #4c7492;
+    background-image: url(../Dashboard/Graphics/headerback.gif);
+    color: white;
+    font-weight: bold;
+    background-repeat: repeat-x;
+}
+
+#PostsTable .OddRow
+{
+    background-color: #ecf2f7;
+}
+
+
+#Dashboard
+{
+    width: 100%;
+    border: solid #c8c8c8;
+    border-width: 1;
+    border-collapse: collapse;
+    background-image: url(../Dashboard/Graphics/back2.gif);
+    background-repeat: repeat-x;
+    background-color: #f7f9fb;
+}
+
+#Dashboard #Header
+{
+    height: 35;
+    border: solid #c8c8c8;
+    border-width: 1;
+    background-image: url(../Dashboard/Graphics/headerback2.gif);
+    background-repeat: repeat-x;
+    padding-left: 10;
+    font-size: 11;
+    color: White;
+    font-weight: bold;
+}
+
+#Dashboard #Content
+{
+    vertical-align: top;
+    padding: 10;
+    font-size: 11px;
+    line-height: 200%;
+}
+
+#Dashboard #Content hr
+{
+    height: 1px;
+    background-color: #e9eef2;
+    border-style: none;
+    width: 98%;
+}
+
+
+
+/* editposts.aspx */
+
+#html_button
+{
+    position: relative; /* left: 397;     top: -38;*/
+    top: 3;
+    margin-right: 5;
+    width: 122;
+    float: right;
+    height: 38;
+    background-image: url(Graphics/edit_html_2.gif);
+    cursor: hand;
+    cursor: pointer;
+}
+
+#compose_button
+{
+    position: relative;
+    top: 3;
+    float: right; /*  left: 527;     top: -38;*/
+    width: 122;
+    height: 38;
+    background-image: url(Graphics/compose_2.gif);
+    cursor: hand;
+    cursor: pointer;
+}
+
+.editpostbutton
+{
+    width: 80;
+    height: 25;
+    font-family: Verdana;
+    font-size: 11;
+    line-height: 1.5;
+    padding: 2;
+}
+
+
+
+#Editor
+{
+    border: solid #c8c8c8;
+    border-width: 0;
+    width: 630;
+    height: 335;
+}
+
+#Editor iframe
+{
+    width: 100%;
+    height: 292;
+    border: solid #b8b8b8;
+    border-width: 1;
+    padding: 0;
+}
+
+
+
+#Editor #Toolbar
+{
+    border: solid #c8c8c8;
+    border-width: 0;
+    width: 100%;
+    height: 40;
+    vertical-align: middle;
+    padding-top: 0;
+}
+
+.ToolbarButton
+{
+    float: left;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    border: solid #f8fafb;
+    border-width: 1;
+    margin-right: 5;
+}
+
+.PublishButton
+{
+    background-image: url(Graphics/publish.gif);
+    background-repeat: no-repeat;
+    padding-left: 18px;
+    padding-bottom: 2px;
+    font-size: 11px;
+    vertical-align: middle;
+    border: solid #b1bbc5;
+    border-width: 1px;
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 15px;
+    text-decoration: none;
+    background-position: 10px center;
+    color: #2266de;
+    width: 45px;
+        cursor: hand;
+    cursor: pointer;
+}
+
+.SaveButton
+{
+    background-image: url(Graphics/save.gif);
+    background-repeat: no-repeat;
+    padding-left: 18px;
+    padding-bottom: 2px;
+    font-size: 11px;
+    vertical-align: middle;
+    border: solid #b1bbc5;
+    border-width: 1px;
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 15px;
+    text-decoration: none;
+    background-position: 10px center;
+    color: #2266de;
+    width: 40px;
+        cursor: hand;
+    cursor: pointer;
+}
+
+.PreviewButton
+{
+    background-image: url(Graphics/preview.gif);
+    background-repeat: no-repeat;
+    font-size: 11px;
+    vertical-align: middle;
+    border: solid #b1bbc5;
+    border-width: 1px;
+    padding: 10px;
+    padding-left: 35px;
+    padding-right: 10px;
+    text-decoration: none;
+    background-position: 10px center;
+    cursor: hand;
+    cursor: pointer;
+    width: 50px;
+    color: #2266de;
+}
+
+.CancelButton
+{
+    background-repeat: no-repeat;
+    padding-left: 18px;
+    padding-bottom: 2px;
+    font-size: 11px;
+    vertical-align: middle;
+    border: solid #b1bbc5;
+    border-width: 1px;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-decoration: none;
+    background-position: 10px center;
+    cursor :pointer ;
+    cursor :hand;
+     color: #2266de;
+}
+
+.PostOptionsButton
+{
+    background-image: url(Graphics/post_options.gif);
+    background-repeat: no-repeat;
+    font-size: 11px;
+    vertical-align: middle;
+    border: solid #b1bbc5;
+    border-width: 1px;
+    padding: 10px;
+    padding-left: 35px;
+    padding-right: 10px;
+    text-decoration: none;
+    background-position: 10px center;
+    cursor: hand;
+    cursor: pointer;
+    width: 50px;
+    color: #2266de;
+}
+
+/* deletepost.aspx */
+
+#DeletePostPreview
+{
+    border: solid #c8c8c8;
+    border-width: 1;
+    width: 500;
+}
+
+/* message.aspx */
+
+#MessageContainer
+{
+    position: relative;
+    top: 140px;
+    height: 90%;
+    text-align: center;
+    vertical-align: middle;
+}

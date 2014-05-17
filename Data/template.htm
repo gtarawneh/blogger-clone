@@ -1,0 +1,393 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	
+	<$BlogMetaData$>
+
+    <title><$BlogPageTitle$></title>
+    <link type="text/css" href="TemplateStyles.css"  rel="Stylesheet"/>
+
+    <itempage>
+    <style type ="text/css" >
+    
+    .post
+    {
+        border-bottom: none;
+    }
+    </style>
+
+    </itempage>
+    
+    <script type ="text/javascript" >
+  
+    <itempage>   
+     
+    function setCookie(c_name,value)
+    {
+        var today=new Date();
+
+        var expiry = new Date(today.getTime() + 90*24*60*60*1000);
+
+        document.cookie = c_name+ "=" +escape(value)+";expires="+expiry.toGMTString()+';path=/;';
+
+    }
+    
+    function getCookie(name)
+    {
+        var rexp = new RegExp(name +"=([^;]+)");
+        var val=rexp.exec(document.cookie);
+        return (val!=null)?unescape(val[1]):"";
+    }
+    /*
+    function getCookie1(c_name)
+    {
+        if (document.cookie.length>0)
+        {
+            c_start=document.cookie.indexOf(c_name + "=");
+            
+            if (c_start!=-1)
+            { 
+                c_start += c_name.length+1 ;
+                
+                c_end = document.cookie.indexOf(";",c_start);
+                
+                if (c_end == -1) c_end = document.cookie.length;
+                
+                return unescape(document.cookie.substring(c_start,c_end));
+            }
+        }
+        return "";
+     }
+     */
+    function LoadFormFields()
+    {
+        var all = getCookie("cmtName") + getCookie("cmtURL") + getCookie("cmtEmail");
+ 
+        var ch = (all != "");
+        
+        if (document.all)
+        {
+            // IE
+            
+            document.all.nameBox.value = getCookie("cmtName");
+            
+            document.all.urlBox.value = getCookie("cmtURL");
+            
+            document.all.emailBox.value = getCookie("cmtEmail");
+ 
+            document.all.check1.checked = ch;
+        }
+        else
+        {
+            // FireFox
+            
+            document.getElementById ("nameBox").value = getCookie("cmtName");
+            
+            document.getElementById ("urlBox").value = getCookie("cmtURL");
+            
+            document.getElementById ("emailBox").value = getCookie("cmtEmail");
+            
+            document.getElementById ("check1").checked = ch;
+        }
+    }
+
+    function SaveFormFields()
+    {
+        if (document.all)
+        {
+            // IE
+            
+            if (document.all.check1.checked)
+            {
+            
+                setCookie("cmtName", document.all.nameBox.value);
+                
+                setCookie("cmtURL", document.all.urlBox.value);
+
+                setCookie("cmtEmail", document.all.emailBox.value);
+                
+               
+            }
+            else
+            {
+                setCookie("cmtName", "");
+                
+                setCookie("cmtURL", "");
+
+                setCookie("cmtEmail", "");
+                
+              
+            }
+                
+        }
+        else
+        {
+             // FireFox
+             
+             if (document.getElementById ("check1").checked)
+             {
+            
+                setCookie("cmtName", document.getElementById ("nameBox").value);
+                
+                setCookie("cmtURL", document.getElementById ("urlBox").value);
+
+                setCookie("cmtEmail", document.getElementById ("emailBox").value);
+
+            }
+            else
+            {
+                setCookie("cmtName", "");
+                
+                setCookie("cmtURL", "");
+
+                setCookie("cmtEmail", "");
+
+            }
+        }       
+    }
+    
+    </itempage>
+    
+    function XOR(theText, key)
+    {
+        var result="";
+
+        for(i=0;i<theText.length;++i)
+        {
+	        result += String.fromCharCode(key ^ theText.charCodeAt(i));
+        }
+
+        return result;
+    }
+
+    </script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-140531-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body>
+<div id="wrap">
+    <!-- #wrap - for centering -->
+    <!-- Blog Header -->
+  
+  <a href="<$BlogURL$>">
+    <div style="display: block;" id="blog-header">
+        <h1>
+            
+        </h1>
+    </div>
+    
+   </a>
+    <div id="content">
+        <!-- #content wrapper -->
+        <!-- Begin #main-content -->
+        <div id="main-content">
+            <Blogger>
+
+ 
+  
+     
+  <!-- Begin .post -->
+  <div class="post"><a name="<$BlogItemNumber$>"></a>
+     
+    <BlogItemTitle>
+    <h3 class="post-title">
+
+	 <$BlogItemTitle$>
+	 
+
+    </h3>
+    </BlogItemTitle>
+    
+   <BlogDateHeader>
+  <h2 class="date-header"><$BlogDateHeaderDate$></h2>
+  </BlogDateHeader>  
+     
+    <div class="post-body">
+    
+<div class="post-text">
+
+      <$BlogItemBody$>
+</div>
+
+
+    
+    <br />
+    
+    <p class="post-footer">Posted by Black [X] Truder
+    
+    <BlogItemCommentsEnabled><MainOrArchivePage> | <a class ="comment-link" href="<$BlogItemPermalinkURL$>#comments" target="_self">Comments (<$BlogItemCommentCount$>)</a></MainOrArchivePage></BlogItemCommentsEnabled>
+
+<ItemPage> | <a class ="home-link" href="<$BlogURL$>">Back to Home Page</a></ItemPage>
+</p>
+</div>  
+
+</div>
+        <!-- End .post -->
+        <!-- Begin #comments -->
+        <itempage>
+
+<div id="comments"> 
+	<BlogItemCommentsEnabled>
+
+
+
+    <h4><$BlogItemCommentCount$> Response(s) to "<$BlogItemTitle$>"</h4>
+
+    <ul>
+    
+      <BlogItemComments>
+      
+      <BlogCommentNewest><div id="newcomment" name="newcomment"></div></BlogCommentNewest>
+      
+      <li>
+
+	<p align="right" class ="comment-time"><img class="clock" src="http://localhost/blog/ThemeGraphics/clock.gif"  align="top"> <$BlogCommentDateTime$></p>
+
+        <div class="comment-body">
+         <p align="justify">
+
+<b><$BlogCommentAuthor$></b> said:<br><br>
+
+<$BlogCommentBody$>
+
+</div><br/>
+
+<p align="right" class="comment-data"></p>
+      </li>
+      
+      
+      </BlogItemComments>
+      
+    </ul>
+
+<br>
+
+ <div class="movetotheright">
+
+    </p>
+    
+    <div id ="commenting-form">
+    
+    <br />
+    
+        <span id ="caption">Write a Comment</span>
+        
+        <br /><br /><br />
+        
+
+        
+        <form id="cmtfrm" name="cmtfrm" action ="<$BlogItemPermalinkURL$>#newcomment" method ="post" >
+        
+        
+        <div class="formfield">Name:</div> <input type ="Text" id ="nameBox" name="nameBox" />
+        
+        <br /><br />
+        
+        <div class="formfield">Email:</div> <input type ="Text" id ="emailBox" name="emailBox"/>
+   
+        <br /><br />
+        
+        <div class="formfield">Web Site:</div> <input type ="Text" id ="urlBox" name="urlBox"/>
+        
+        <br /><br />
+        
+        <input type="checkbox" onchange ="SaveFormFields();" id ="check1" name="check1"/> Remember Me
+        
+        <br /><br />
+        
+        <textarea name="commentBox" rows="10" id="commentBox"></textarea>
+        
+        <input id="cmtPostID" name="cmtPostID" type="hidden" value ="<$BlogItemNumber$>" >
+        
+        <br /><br />
+        
+        <a class ="home-link" style=" margin-top :2px ; float:left;" href="<$BlogURL$>">Back to Home Page</a>
+        
+        <input type="button"  onclick ="SaveFormFields(); cmtfrm.submit();" id="commentButton" name="commentButton" value ="Submit Comment" />
+    </form>
+    
+    </div>
+    <br /><br />
+    
+    <script type ="text/javascript" >
+        
+        LoadFormFields();
+    </script>
+    
+    
+<br/><br/>
+    </div>	</BlogItemCommentsEnabled>
+
+</div>
+  
+</itempage>
+        <!-- End #comments -->
+        </Blogger>
+        
+        <hr />
+    </div>
+    <!-- End #main-content -->
+</div>
+<!-- End #content -->
+<!-- Begin #sidebar -->
+<div id="sidebar">
+    <br />
+    <h2 class="Personal">
+    </h2>
+    <p>
+      My bio here
+    </p>
+    <h2 class="BlogStuff">
+    </h2>
+    <ul class="Articles">
+        <li href="Some Link"><a href="http://localhost/blog/picture-gallery.htm">
+            Picture Gallery</a></li>
+        <li href="Some Link"><a href="http://localhost/blog/music-selections.htm">
+            Music Selections</a></li>
+        <li href="Some Link"><a href="http://localhost/blog/my-programs.htm">
+            My Programs</a></li>
+        <li href="Some Link"><a href="http://localhost/blog/featured-blog-posts.htm">
+            Featured Blog Posts</a></li>
+    </ul>
+    <br>
+    <h2 class="Latest">
+    </h2>
+    <ul class="Articles">
+        <bloggerpreviousitems>
+        <li><a style='font-family:"Verdana";' href="<$BlogItemPermalinkURL$>"><$BlogPreviousItemTitle$></a></li>
+        </bloggerpreviousitems>
+    </ul>
+    <br>
+    <h2 class="BlogArchive">
+    </h2>
+    <ul class="Folders">
+    <BloggerArchives>
+<li><a href="<$BlogArchiveURL$>"><$BlogArchiveName$></a></li>
+</BloggerArchives>
+    </ul>
+</div>
+<!-- End #sidebar -->
+<div class="clear">&nbsp;</div>
+<div id="footer">
+    <p>
+        <!-- If you'd like, you could place footer information here. -->
+    </p>
+</div>
+</div>
+
+</body>
+
+</html>
